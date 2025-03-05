@@ -31,16 +31,16 @@
             age = Number(age); // Ensure age is a number
 
             function checkAge(age) {
-                return new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                        if (age >= 18) {
-                            resolve("Welcome, name. You can vote.");
-                        } else {
-                            reject("Oh sorry name. You aren't old enough.");
-                        }
-                    }, 4000);
-                });
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (age >= 18) {
+                resolve(`Welcome, ${name}. You can vote.`);
+            } else {
+                reject(`Oh sorry ${name}. You aren't old enough.`);
             }
+        }, 4000);
+    });
+}
 
             checkAge(age)
                 .then(message => alert(message))
